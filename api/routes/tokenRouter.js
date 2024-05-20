@@ -7,14 +7,7 @@ const tokenRouter = express.Router();
 const User = require('../models/User.js');
 const message = { msgBody: "Error has occured", msgError: true };
 
-const { Alchemy, Network } = require("alchemy-sdk");
-const config = {
-    apiKey: "hy_Z1wtYUhY-8gkpbRAuBI89w91xVJrI",
-    network: Network.BASE_MAINNET,
-};
-const alchemy = new Alchemy(config);
-
-const provider = new JsonRpcProvider('https://base-mainnet.g.alchemy.com/v2/hy_Z1wtYUhY-8gkpbRAuBI89w91xVJrI');
+const provider = new JsonRpcProvider('https://base-mainnet.g.alchemy.com/v2/' + process.env.ALCHEMY_API_KEY);
 
 const factoryAddress = "0xeBE19992927933bCf1D9f01977Dfe24Bcc760936";
 const factoryAbi = require("../contracts/Factory.json");
@@ -222,39 +215,39 @@ tokenRouter.get('/created/:address', async (req, res) => {
     }
 });
 
-tokenRouter.get('/portfolio/:address', async (req, res) => {
-    try {
-        const address = req.params.address;
+// tokenRouter.get('/portfolio/:address', async (req, res) => {
+//     try {
+//         const address = req.params.address;
 
-        const balances = await alchemy.core.getTokenBalances(address);
+//         const balances = await alchemy.core.getTokenBalances(address);
 
-        const nonZeroBalances = balances.tokenBalances.filter((token) => {
-            return token.tokenBalance !== "0";
-        });
+//         const nonZeroBalances = balances.tokenBalances.filter((token) => {
+//             return token.tokenBalance !== "0";
+//         });
 
-        const tokenArray = [];
+//         const tokenArray = [];
 
-        for (let token of nonZeroBalances) {
-            let balance = token.tokenBalance;
+//         for (let token of nonZeroBalances) {
+//             let balance = token.tokenBalance;
 
-            const metadata = await alchemy.core.getTokenMetadata(token.contractAddress);
+//             const metadata = await alchemy.core.getTokenMetadata(token.contractAddress);
 
-            balance = balance / Math.pow(10, metadata.decimals);
-            balance = balance.toFixed(2);
+//             balance = balance / Math.pow(10, metadata.decimals);
+//             balance = balance.toFixed(2);
 
-            tokenArray.push({
-                name: metadata.name,
-                balance: `${balance} ${metadata.symbol}`,
-                logo: metadata.logo,
-                symbol: metadata.symbol
-            });
-        }
-        res.json(tokenArray);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-});
+//             tokenArray.push({
+//                 name: metadata.name,
+//                 balance: `${balance} ${metadata.symbol}`,
+//                 logo: metadata.logo,
+//                 symbol: metadata.symbol
+//             });
+//         }
+//         res.json(tokenArray);
+//     } catch (error) {
+//         console.error(error);
+//         res.status(500).json({ error: 'Internal Server Error' });
+//     }
+// });
 
 tokenRouter.post('/add-token', async (req, res) => {
     const { tokenAddress } = req.body.newToken;
