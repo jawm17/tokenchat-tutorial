@@ -1,0 +1,21 @@
+#bodyArea {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#top3row {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px 10px;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px; */
+   width: 900px;
+}
+
+#top3row .recUser {
+    /* width: 400px; */
+    /* height: 100px; */
+}

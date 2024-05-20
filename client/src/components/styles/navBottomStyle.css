@@ -1,0 +1,50 @@
+#navBottomOuterFlex {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    left: 0px;
+    bottom: 10px;
+    /* background-color: red; */
+}
+
+#navBottom {
+    height: 50px;
+    width: calc(100% - 0px);
+    max-width: 710px;
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 800px) { 
+    #navBottom {
+    margin-left: 0px;
+    width: calc(100% - 15px);
+    }
+}
+
+.bottomBtn {
+    width: calc(50% - 8px);
+    height: calc(100% - 8px);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--graySecond);
+    color: rgb(153, 153, 153);
+}
+
+#selectedBtn {
+    background-color: var(--blue);
+    color: white;
+}
+
+#btnIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}

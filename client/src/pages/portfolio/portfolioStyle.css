@@ -1,0 +1,132 @@
+
+
+#profileTop {
+    width: calc(100% - 0px);
+    padding: 20px;
+    background-color: rgba(34, 34, 34, 0.189);
+    border-radius: 6px;
+    color: white;
+    /* border: solid 1px rgb(255, 0, 234); */
+    border: solid 1px var(--blue);
+    margin-top: 15px;
+}
+
+#profileTopRow {
+    display: flex;
+    /* align-items: center; */
+}
+
+#profileImg {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#nameArea {
+    margin-left: 25px;
+}
+
+#username {
+    font-weight: bold;
+    /* font-size: 22px; */
+}
+
+#address {
+    margin-top: 5px;
+}
+
+#userBalance {
+    margin-top: 5px;
+}
+
+#addressEdited {
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    color: gray;
+    background-color: black;
+}
+
+#badgeRow {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.badge {
+    background-color: #0b85ff4b;
+    color: var(--blue);
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+#greenBadge {
+    background-color: rgba(0, 255, 0, 0.38);
+    color: rgb(0, 252, 0);
+}
+
+#yellowBadge {
+    background-color: rgba(226, 255, 6, 0.594);
+    color: rgb(255, 255, 0);
+}
+
+#redBadge {
+    background-color: rgba(196, 0, 0, 0.413);
+    color: red;
+}
+
+#orangeBadge {
+    background-color: rgba(255, 86, 44, 0.563);
+    color: rgb(255, 153, 36);
+}
+
+#pinkBadge {
+    background-color: rgba(255, 0, 234, 0.433);
+    color: rgb(255, 0, 234);
+}
+
+
+.tabRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.tab {
+    background-color: black;
+    color: #535353;
+    border: solid 1px var(--graySecond);
+    border-radius: 30px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.04s linear;
+}
+
+.tab:active {
+    border: solid 1px var(--blue);
+    color: white;
+}
+
+#activeTab {
+    color: white;
+    background-color: var(--blue);
+}
+
+@media only screen and (max-width: 800px) {
+    #profileTop {
+        margin-top: 5px;
+    }
+}

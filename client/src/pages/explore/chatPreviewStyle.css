@@ -1,0 +1,108 @@
+.recUser {
+    width: calc(100% - 2px);
+    height: 78px;
+    background-color: rgba(34, 34, 34, 0.189);
+    border: solid 1px var(--graySecond);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.125s ease-in-out;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.recUser:hover {
+    border: solid 1px var(--blue);
+}
+
+.recUserImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 25px;
+}
+
+.recUserDeets {
+    margin-left: 15px;
+}
+
+.nameFlex {
+    display: flex;
+    align-items: center;
+}
+
+.xLogo {
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+}
+
+.recUserName {
+    font-weight: bold;
+}
+
+
+.statusFlex {
+    display: flex;
+    align-items: center;
+}
+
+.statusColor {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #00fc00;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+#offlineColor {
+    background-color:rgb(37, 37, 37);
+}
+
+.statusLabel {
+    margin-left: 0px;
+    color: rgb(153, 153, 153);
+}
+
+.recAmount {
+    position: absolute;
+    right: -100%;
+    right: 48px;
+    background-color: #0b85ff4b;
+    color: var(--blue);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+.recEth {
+    height: 14px;
+    margin-right: 5px;
+}
+
+.recUser:hover .recAmount {
+    right: 45px;
+}
+
+#recArrow {
+    position: absolute;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    transition: all 0.2s;
+    /* z-index: 2; / */
+}
+
+.recUser:hover #recArrow {
+    right: 13px;
+}

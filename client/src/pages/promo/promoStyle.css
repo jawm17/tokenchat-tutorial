@@ -1,0 +1,16 @@
+#promoBody {
+    width: 100vw;
+}
+
+.promoTile {
+    font-family: "Bungee", sans-serif;
+    color: var(--graySecond);
+    font-size: 24px;
+    display: inline;
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+
+#chosen {
+    color: white;
+}

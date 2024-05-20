@@ -1,0 +1,32 @@
+#messageArea {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    height: calc(100% - 55px);
+    overflow: scroll;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    /* background-color: red; */
+}
+
+.msgFlex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#fromUser {
+    justify-content: flex-end;
+}
+
+.message {
+    padding: 10px;
+    background-color: gray;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+#fromUser .message {
+    background-color: var(--blue);
+}

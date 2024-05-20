@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="text"],input[type="password"],
+input[type="email"],input[type="number"],
+input[type="tel"],
+textarea{
+    @apply w-full border my-1 py-2 px-3 rounded-2xl;
+}
+textarea{
+    height: 140px;
+}
+button{
+    @apply bg-gray-300;
+}
+button.primary{
+    background-color: #F5385D;
+    @apply bg-primary p-2 w-full text-white rounded-2xl;
+}
+
+body {
+    background-color: var(--bg);
+    /* color: var(--blue); */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+  
+  html::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+  
+  div::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+
+  /* Change the input white to any color */
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+textarea, input {
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: inherit;
+  resize: none; /*remove the resize handle on the bottom right*/
+}
+
+/* ======================== */
+/* globle vars */
+/* ======================== */
+:root {
+    /* COLORS */
+    /* --blue: #0b83ff;
+    --grayMain: #14171a;
+    --graySecond: #1a1e21; */
+
+    --blue: #0b83ff;
+    --bg: black;
+    --grayMain: #0A0A0A;
+    --graySecond: #191919;
+    --grayThird: #2d2d2d;
+  }

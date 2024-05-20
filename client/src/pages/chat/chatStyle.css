@@ -1,0 +1,179 @@
+#chatArea {
+    width: 100%;
+    height: calc(100% - 0px);
+    width: calc(100% - 2.5px);
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: var(--grayMain);
+    border: solid 1px var(--graySecond);
+    overflow: scroll;
+    position: relative;
+    padding-bottom: 0px;
+}
+
+#uniswapBtn {
+    background-color: #FC73FF;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 35px;
+
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+}
+
+#uniswapBtn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#uniText {
+
+}
+
+/* IFRAME ======================================= */
+
+#convoArea {
+    width: 100%;
+    height: calc(100% - 80px);
+    /* background-color: #0b85ff4b; */
+    border-radius: 4px;
+    margin-top: 0px;
+    position: relative;
+}
+
+#textBoxArea {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 15px;
+    padding-top: 20px;
+    border-top: solid 1px var(--graySecond);
+    background-color: var(--grayMain);
+    z-index: 4;
+}
+
+#textBoxMain {
+    /* margin-bottom: 10px; */
+    width: calc(100% - 60px);
+    /* max-width: 400px; */
+    height: 35px;
+    border-radius: 40px;
+    background-color: var(--grayMain);
+    background-color: black;
+    border: solid 1px var(--graySecond);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#textInputMain {
+    width: 95%;
+    height: 90%;
+    background-color: transparent;
+}
+
+.chatBtn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; 
+}
+
+#sendBtn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--blue);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#sendBtn svg {
+    height: 20px;
+}
+
+#imgBtn svg {
+    /* height: 20px; */
+}
+
+#pollBtn {
+    /* width: 35px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; 
+    font-size: 14px;
+}
+
+#pollBtn svg {
+    /* margin-right: 5px; */
+    height: 15px;
+}
+
+#membersBtn svg {
+    height: 15px;
+}
+
+.pinkBadge {
+    background-color: rgba(255, 0, 234, 0.433);
+    /* color: rgb(94, 4, 86); */
+}
+
+.greenBadge {
+    background-color: rgba(0, 252, 0, 0.711);
+    /* color: rgb(0, 252, 0); */
+}
+
+.yellowBadge {
+    background-color: rgba(226, 255, 6, 0.594);
+    color: rgb(255, 255, 0);
+}
+
+.redBadge {
+    background-color: rgba(196, 0, 0, 0.413);
+    color: red;
+}
+
+.orangeBadge {
+    background-color: rgba(255, 86, 44, 0.563);
+    color: rgb(255, 153, 36);
+}
+
+.blueBadge {
+    background-color: var(--blue);
+    color: white;
+}
+
+@media only screen and (max-width: 800px) { 
+
+    #chatArea {
+        border: none;
+        background-color: transparent;
+        padding: 0px;
+        margin-left: 10px;
+        width: calc(100% - 20px);
+    }
+}

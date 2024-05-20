@@ -1,0 +1,67 @@
+#previewImgArea {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+#profilePreviewImg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 4px var(--graySecond);
+}
+
+#previewName {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.previewFlex {
+    display: flex;
+    justify-content: center;
+}
+
+#previewAmount {
+    background-color: #0b85ff4b;
+    color: var(--blue);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    display: inline;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.previewStat {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#startChattingBtn {
+    width: calc(100% - 40px);
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    background-color: var(--blue);
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+#startChattingText {
+    margin-left: 15px;
+}
+
+#startChattingIcon {
+    margin-right: 10px;
+}

@@ -1,0 +1,292 @@
+#exploreCenter {
+    max-width: 700px;
+    width: 100%;
+    height: calc(100% - 0px);
+    padding-top: 10px;
+    position: relative;
+    overflow-y: scroll;
+    padding-bottom: 60px;
+    /* background-color: var(--grayMain); */
+}
+
+#headerUserImg:active {
+    padding: 2px;
+}
+
+#headerFlex {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* backdrop-filter: blur(26px); */
+    width: 100%;
+    /* position: absolute; */
+    z-index: 15;
+}
+
+#headerLogo {
+    width: 55px;
+    margin-right: 0px;
+    margin-left: -5px;
+}
+
+#siteTitle {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#createBtn {
+    width: 110px;
+    height: 36px;
+    background-color: var(--blue);
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 2px;
+}
+
+#searchContainer {
+    width: calc(100% - 00px);
+    height: 40px;
+    border-radius: 5px;
+    background-color: black;
+    border: solid 1px var(--graySecond);
+    cursor: crosshair;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    position: relative;
+    /* display: none; */
+}
+
+#searchIcon {
+    margin-left: 10px;
+    height: 20px;
+    color: var(--blue);
+}
+
+#searchInput {
+    width: calc(100% - 40px);
+    margin-left: 10px;
+    height: 95%;
+    background-color: transparent;
+}
+
+#categoriesTitle {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#catergoryListContainer {
+    width: 100%;
+    /* background-color: red; */
+    overflow-x: scroll;
+}
+
+#catergoryList {
+    min-width: 540px;
+}
+
+.categoryItem {
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: var(--graySecond);
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: all 0.1s ease-out;
+}
+
+.categoryItem:hover {
+    background-color: var(--blue);
+}
+
+#recTitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#kothBG {
+    width: calc(100% - 4px);
+    border-radius: 6px;
+    background-color: var(--blue);
+    margin-top: 10px;
+    padding: 2px;
+    height: 170px;
+    position: relative;
+    cursor: pointer;
+}
+
+#koth {
+    width: calc(100% - 0px);
+    border-radius: 6px;
+    background-color: var(--grayMain);
+    background-color: #060606;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    /* border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red) 30;
+    border-image-slice: 1; */
+}
+
+#kothImg {
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    margin: 20px;
+    object-fit: cover;
+}
+
+#kothName {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#kothSub {
+    font-size: 18px;
+}
+
+#kothLabelArea {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#leftKothLabel {
+    display: flex;
+    align-items: center;
+}
+
+#crownImg {
+    height: 25px;
+    margin-right: 10px;
+}
+
+#kothText {
+    font-family: "Bungee", sans-serif;
+    font-size: 20px;
+}
+
+.tabRowExplore {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+#mainBody {
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    border: solid 2px var(--graySecond);
+    border-radius: 4px;
+    padding: 0px;
+    height: calc(100vh - 4px);
+    /* max-height: 90vh; */
+    width: calc(100vw - 4px);
+    /* max-width: 95vw; */
+    /* background-color: var(--grayMain); */
+    display: flex;
+    justify-content: center;
+    /* color: var(--blue); */
+}
+
+@media only screen and (max-width: 800px) {
+    #mainBody {
+        width: 100vw;
+        height: 100%;
+        transform: none;
+        top: 0px;
+        max-height: none;
+        max-width: none;
+        left: 0px;
+        border-radius: 0px;
+        border-color: transparent;
+        padding: 10px;
+    }
+
+    .recAmount {
+        display: none;
+    }
+
+    #crownedLabel {
+        display: none;
+    }
+
+    #kothLabelArea {
+        justify-content: center;
+    }
+    #exploreCenter {
+        padding-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #exploreCenter {
+        padding-top: 0px;
+    }
+
+    #headerLogo {
+        width: 55px;
+        margin-right: 0px;
+        margin-left: -5px;
+    }
+    
+    #siteTitle {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: "Bungee", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    #kothName {
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    #kothSub {
+        font-size: 15px;
+    }
+    #kothImg {
+        border-radius: 50%;
+        height: 55px;
+        width: 55px;
+        margin: 15px;
+        object-fit: cover;
+    }
+}
